@@ -9,50 +9,44 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   
-    <style>
-      .heading{text-align:center; 
-         font-family:'cambria';
-         color:rgb(100,100,100);
-         font-weight:normal;
-        }
-      p{
-        color:rgb(80,80,80);
-        font-size:40px;
-        font-family:'cambria';
-        text-align:center;
-      }
-      #banner{
-        width:100%;
-        height:360px;
-        object-fit:cover;
-      }
-      .container{
-        margin:0 auto;
-        max-width:720px;
-      }
-      .text{
-        font-family:'roboto';
-        font-size:20px;
-        color:rgb(80,80,80);
-        text-align:center;
-      }
-    </style>
+   <style>
+     #banner{
+       height: 360px;
+       width: 100%;
+       object-fit: cover;
+       margin-bottom: 16px;
+     }
+   </style>
   
-    <title>Radhe-InfoTech Career</title>
+    <title>{{company_name}}Career</title>
 </head>
 <body>
   <div class='container'> 
-    <h1 class="heading">Radhe-InfoTech</h1>
-     <img id='banner' src="..\static\tag_img.jpg" height="320"/> 
-    <h3 class="heading">About Radhe InfoTech</h3>
-      <p class='text'>We are a leading IT company dedicated to providing innovative solutions for businesses of all sizes</p>
-      <p class='text'>We offer a wide range of services including: Web Cloud Mobile AI/ML</p>
-        <h3 class="heading">Job openenings</h3>
-        <p>Data Analytics</p>
+    <h1 class='text-center mt-2 mb-4 shadow-sm p-3 mb-5 bg-body-tertiary rounded'>Radhe-InfoTech</h1>
+     <img class='img-fluid' id='banner' src="..\static\tag_img.jpg" height="320"/> 
+    
+    <h3 class='text-center mt-2 mb-4 shadow p-3 mb-5 bg-body-tertiary rounded' >About Radhe InfoTech</h3>
+    <ul>
+      <li class='lean'>
+      We are a leading IT company dedicated to providing innovative solutions for businesses of all sizes
+      </li>
+      <li class='lean'>We offer a wide range of services including: Web Cloud Mobile AI/ML
+      </li>
+       </ul>
+        
+        
+   
+        <h3 class='text-center mt-3 mb-4 shadow p-3 mb-5 bg-body-tertiary rounded' >Job openenings</h3>
+        <div class='shadow-sm p-3 mb-5 bg-body-tertiary rounded's>
+          {% for job in jobs %}
+            {% include 'jobitem.html' %}
+          {% endfor %}
+        </div>
+
+    
     <div style='text-align:center'> 
-        <button>Contact Us</button>
-      <p style='font-size:10px'>Copyright, 2025 
-      RadheInfoTech</p>
+        <button class='btn btn-primary btn-lg'>Contact Us</button>
+        <p style='font-size:10px' class='text-center mt-2 sm-2'>Copyright, 2025 RadheInfoTech</p>
     </div>
     
   </div>
